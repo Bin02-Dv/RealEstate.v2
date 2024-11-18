@@ -1,0 +1,581 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Estate Website</title>
+
+    <!-- My lineawesome link -->
+    <link rel="stylesheet" href="{% static 'lineawesome/css/line-awesome.min.css' %}">
+
+    <!-- My css link -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    
+    <!-- my header section start -->
+
+    <header>
+        <a href="#" class="logo"><span>Real</span> Estate</a>
+
+        <nav class="navbar">
+            <a href="#home">home</a>
+            <a href="#services">services</a>
+            <a href="#featured">featured</a>
+            <a href="#agents">agents</a>
+            <a href="#contacts">contacts</a>
+        </nav>
+    
+        <div class="icons">
+            <div id="menu-bars" class="la la-bars"></div>
+            <a href="#" class="la la-heart"></a>
+            <a href="#" class="la la-user"></a>
+        </div>
+    </header>
+
+    <!-- my header section ends -->
+
+    <!-- home section starts -->
+
+    <section class="home" id="home">
+
+        <form method="post" id="signup">
+            {% csrf_token %}
+            
+            <h3>Sign Up</h3>
+
+            <div class="out-put" id="text-container">
+                <span id="animated-text"></span>
+            </div>
+
+            <div class="inputBox">
+                <input type="text" placeholder="Full Name" name="full_name" required>
+                <input type="email" placeholder="Email" name="email" required>
+                <input type="text" placeholder="Username" name="username" required>
+                <input type="password" placeholder="Password" name="password" required>
+                <input type="password" placeholder="Confirm Password" name="cpassword" required>
+            </div>
+            <input type="submit" value="Sign Up" class="btn">
+        </form>
+
+    </section>
+
+    <!-- home section ends -->
+
+
+    <!-- services section starts -->
+
+    <section class="services" id="services">
+
+        <h1 class="heading">our <span>services</span></h1>
+
+        <div class="box-container">
+
+            <div class="box">
+                <img src="{% static 'img/buying_house.png' %}" alt="">
+                <h3>buying home</h3>
+                <p></p>
+                <a href="#" class="btn">learn more</a>
+            </div>
+
+            <div class="box">
+                <img src="{% static 'img/selling_house.png' %}" alt="">
+                <h3>selling home</h3>
+                <p></p>
+                <a href="#" class="btn">learn more</a>
+            </div>
+
+            <div class="box">
+                <img src="{% static 'img/renting_house.png' %}" alt="">
+                <h3>renting home</h3>
+                <p></p>
+                <a href="#" class="btn">learn more</a>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- services section ends -->
+
+    <!-- featured section starts -->
+
+    <section class="featured" id="featured">
+
+        <h1 class="heading"><span>featured</span> properties</h1>
+
+        <div class="box-container">
+
+            <div class="box">
+                <div class="image-content">
+                    <img src="{% static 'img/modern1.jpeg' %}" alt="">
+                    <div class="info">
+                        <h3>3 days ago</h3>
+                        <h3>for rent</h3>
+                    </div>
+                    <div class="icons">
+                        <a href="#" class="la la-film"> <h3>2</h3> </a>
+                        <a href="#" class="la la-camera"> <h3>6</h3> </a>
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="price">
+                        <h3>25,000/mo</h3>
+                        <a href="#" class="la la-heart"></a>
+                        <a href="#" class="la la-envelope"></a>
+                        <a href="#" class="la la-phone"></a>
+                    </div>
+                    <div class="locations">
+                        <h3>mordern apartments</h3>
+                        <p>katsina state, kano state, nigeria</p>
+                    </div>
+                    <div class="details">
+                        <h3> <i class="la la-expand"></i> 3500 sqft</h3>
+                        <h3> <i class="la la-bed"></i> 3 beds</h3>
+                        <h3> <i class="la la-bath"></i> 2 baths</h3>
+                    </div>
+                    <div class="buttons">
+                        <a href="#" class="btn">request info</a>
+                        <a href="#" class="btn">view details</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="image-content">
+                    <img src="{% static 'img/modern2.jpeg' %}" alt="">
+                    <div class="info">
+                        <h3>1 days ago</h3>
+                        <h3>for sell</h3>
+                    </div>
+                    <div class="icons">
+                        <a href="#" class="la la-film"> <h3>1</h3> </a>
+                        <a href="#" class="la la-camera"> <h3>4</h3> </a>
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="price">
+                        <h3>25,000/mo</h3>
+                        <a href="#" class="la la-heart"></a>
+                        <a href="#" class="la la-envelope"></a>
+                        <a href="#" class="la la-phone"></a>
+                    </div>
+                    <div class="locations">
+                        <h3>mordern apartments</h3>
+                        <p>katsina state, kano state, nigeria</p>
+                    </div>
+                    <div class="details">
+                        <h3> <i class="la la-expand"></i> 3500 sqft</h3>
+                        <h3> <i class="la la-bed"></i> 3 beds</h3>
+                        <h3> <i class="la la-bath"></i> 2 baths</h3>
+                    </div>
+                    <div class="buttons">
+                        <a href="#" class="btn">request info</a>
+                        <a href="#" class="btn">view details</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="image-content">
+                    <img src="{% static 'img/modern3.jpeg' %}" alt="">
+                    <div class="info">
+                        <h3>4 days ago</h3>
+                        <h3>for rent</h3>
+                    </div>
+                    <div class="icons">
+                        <a href="#" class="la la-film"> <h3>3</h3> </a>
+                        <a href="#" class="la la-camera"> <h3>10</h3> </a>
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="price">
+                        <h3>25,000/mo</h3>
+                        <a href="#" class="la la-heart"></a>
+                        <a href="#" class="la la-envelope"></a>
+                        <a href="#" class="la la-phone"></a>
+                    </div>
+                    <div class="locations">
+                        <h3>mordern apartments</h3>
+                        <p>katsina state, kano state, nigeria</p>
+                    </div>
+                    <div class="details">
+                        <h3> <i class="la la-expand"></i> 3500 sqft</h3>
+                        <h3> <i class="la la-bed"></i> 3 beds</h3>
+                        <h3> <i class="la la-bath"></i> 2 baths</h3>
+                    </div>
+                    <div class="buttons">
+                        <a href="#" class="btn">request info</a>
+                        <a href="#" class="btn">view details</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="image-content">
+                    <img src="{% static 'img/modern4.jpeg' %}" alt="">
+                    <div class="info">
+                        <h3>3 days ago</h3>
+                        <h3>for sell</h3>
+                    </div>
+                    <div class="icons">
+                        <a href="#" class="la la-film"> <h3>3</h3> </a>
+                        <a href="#" class="la la-camera"> <h3>8</h3> </a>
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="price">
+                        <h3>25,000/mo</h3>
+                        <a href="#" class="la la-heart"></a>
+                        <a href="#" class="la la-envelope"></a>
+                        <a href="#" class="la la-phone"></a>
+                    </div>
+                    <div class="locations">
+                        <h3>mordern apartments</h3>
+                        <p>katsina state, kano state, nigeria</p>
+                    </div>
+                    <div class="details">
+                        <h3> <i class="la la-expand"></i> 3500 sqft</h3>
+                        <h3> <i class="la la-bed"></i> 3 beds</h3>
+                        <h3> <i class="la la-bath"></i> 2 baths</h3>
+                    </div>
+                    <div class="buttons">
+                        <a href="#" class="btn">request info</a>
+                        <a href="#" class="btn">view details</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="image-content">
+                    <img src="{% static 'img/modern5.jpeg' %}" alt="">
+                    <div class="info">
+                        <h3>5 days ago</h3>
+                        <h3>for sell</h3>
+                    </div>
+                    <div class="icons">
+                        <a href="#" class="la la-film"> <h3>2</h3> </a>
+                        <a href="#" class="la la-camera"> <h3>9</h3> </a>
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="price">
+                        <h3>25,000/mo</h3>
+                        <a href="#" class="la la-heart"></a>
+                        <a href="#" class="la la-envelope"></a>
+                        <a href="#" class="la la-phone"></a>
+                    </div>
+                    <div class="locations">
+                        <h3>mordern apartments</h3>
+                        <p>katsina state, kano state, nigeria</p>
+                    </div>
+                    <div class="details">
+                        <h3> <i class="la la-expand"></i> 3500 sqft</h3>
+                        <h3> <i class="la la-bed"></i> 3 beds</h3>
+                        <h3> <i class="la la-bath"></i> 2 baths</h3>
+                    </div>
+                    <div class="buttons">
+                        <a href="#" class="btn">request info</a>
+                        <a href="#" class="btn">view details</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="image-content">
+                    <img src="{% static 'img/modern6.jpeg' %}" alt="">
+                    <div class="info">
+                        <h3>2 days ago</h3>
+                        <h3>for rent</h3>
+                    </div>
+                    <div class="icons">
+                        <a href="#" class="la la-film"> <h3>2</h3> </a>
+                        <a href="#" class="la la-camera"> <h3>6</h3> </a>
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="price">
+                        <h3>25,000/mo</h3>
+                        <a href="#" class="la la-heart"></a>
+                        <a href="#" class="la la-envelope"></a>
+                        <a href="#" class="la la-phone"></a>
+                    </div>
+                    <div class="locations">
+                        <h3>mordern apartments</h3>
+                        <p>katsina state, kano state, nigeria</p>
+                    </div>
+                    <div class="details">
+                        <h3> <i class="la la-expand"></i> 3500 sqft</h3>
+                        <h3> <i class="la la-bed"></i> 3 beds</h3>
+                        <h3> <i class="la la-bath"></i> 2 baths</h3>
+                    </div>
+                    <div class="buttons">
+                        <a href="#" class="btn">request info</a>
+                        <a href="#" class="btn">view details</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- featured section ends -->
+
+    <!-- agents section starts -->
+
+    <section class="agents" id="agents">
+
+        <h1 class="heading">professional <span>agents</span></h1>
+
+        <div class="box-container">
+
+            <div class="box">
+                <a href="#" class="la la-envelope"></a>
+                <a href="#" class="la la-phone"></a>
+                <a href="{% static 'img/alamin.jpg' %}">
+                    <img src="{% static 'img/alamin.jpg' %}" alt="">
+                </a>
+                <h3>al-amin bin ahmad</h3>
+                <span>agent</span>
+                <div class="share">
+                    <a href="#" class="la la-facebook-f"></a>
+                    <a href="#" class="la la-twitter"></a>
+                    <a href="#" class="la la-instagram"></a>
+                    <a href="#" class="la la-linkedin"></a>
+                </div>
+            </div>
+
+            <div class="box">
+                <a href="#" class="la la-envelope"></a>
+                <a href="#" class="la la-phone"></a>
+                <a href="{% static 'img/mooh.jpg' %}">
+                    <img src="{% static 'img/mooh.jpg' %}" alt="">
+                </a>
+                <h3>mohammed abdullahi</h3>
+                <span>agent</span>
+                <div class="share">
+                    <a href="#" class="la la-facebook-f"></a>
+                    <a href="#" class="la la-twitter"></a>
+                    <a href="#" class="la la-instagram"></a>
+                    <a href="#" class="la la-linkedin"></a>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- agents section ends -->
+
+
+    <!-- contacts section starts -->
+
+    <section class="contacts" id="contacts">
+
+        <h1 class="heading"><span>contacts</span> us</h1>
+
+        <div class="icons-container">
+
+            <div class="icons">
+                <img src="{% static 'img/phone.jpeg' %}" alt="">
+                <h3>phone number</h3>
+                <p>+2347080295067</p>
+                <p>+2348123456789</p>
+            </div>
+
+            <div class="icons">
+                <img src="{% static 'img/emails.png' %}" alt="">
+                <h3>email address</h3>
+                <p>alaminbin78@gmail.com</p>
+                <p>yusuf123@gmail.com</p>
+            </div>
+
+            <div class="icons">
+                <img src="{% static 'img/locations.png' %}" alt="">
+                <h3>office address</h3>
+                <p>katsina state, nigeria</p>
+            </div>
+
+        </div>
+
+        <div class="row">
+
+            <form method="post" id="message">
+                {% csrf_token %}
+
+                <div class="out-put" id="text-con">
+                    <span id="anime-text"></span>
+                </div>
+
+                <h2>helo</h2>
+
+                <div class="inputBox">
+                    <input type="text" name="name" placeholder="name" id="name">
+                    <input type="number" name="number" placeholder="number" id="number">
+                </div>
+                <div class="inputBox">
+                    <input type="email" name="email" placeholder="email" id="email">
+                    <input type="text" name="subject" placeholder="subject" id="subject">
+                </div>
+
+                <textarea name="message" placeholder="message" id="message" cols="30" rows="10"></textarea>
+                <input type="submit" value="send message" class="btn">
+            </form>
+
+            <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62203.
+            34529903784!2d7.583290369611388!3d12.990449791736555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.
+            1!3m3!1m2!1s0x11b03cb5fdb5668f%3A0xc0fb3ba267ca67e0!2sKatsina!5e0!3m2!1sen!2sng!4v1656412175149!5m2!1sen!2sng" 
+            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+        </div>
+
+    </section>
+
+    <!-- contacts section starts -->
+
+    <!-- footer section starts -->
+
+    <section class="footer">
+
+        <div class="footer-container">
+
+            <div class="box-container">
+
+                <div class="box">
+                    <h3>branch locaton</h3>
+                    <a href="#">katsina</a>
+                    <a href="#">kaduna</a>
+                    <a href="#">kano</a>
+                    <a href="#">zamfara</a>
+                    <a href="#">funtua</a>
+                    <a href="#">abuja</a>
+                </div>
+
+                <div class="box">
+                    <h3>quick links</h3>
+                    <a href="#home">home</a>
+                    <a href="#services">services</a>
+                    <a href="#featured">featured</a>
+                    <a href="#agents">agents</a>
+                    <a href="#contacts">contacts</a>
+                </div>
+
+                <div class="box">
+                    <h3>extra links</h3>
+                    <a href="#">my account</a>
+                    <a href="#">my favorite</a>
+                    <a href="#">my list</a>
+                </div>
+
+                <div class="box">
+                    <h3>follow us</h3>
+                    <a href="#">facebook</a>
+                    <a href="#">instagram</a>
+                    <a href="#">twitter</a>
+                    <a href="#">linkedin</a>
+                </div>
+
+            </div>
+
+            {% comment %} <div class="copyRight">
+                &copy; <span>Al-amin Bin Ahmad</span>
+            </div> {% endcomment %}
+
+        </div>
+
+    </section>
+
+    <!-- footer section starts -->
+
+
+
+
+ <script src="{% static 'js/functionality.js' %}"></script>  
+
+ <script src="{% static 'js/JQ.js' %}"></script>
+ 
+ 
+ <script>
+    $(document).on('submit', '#signup', function (e){
+        e.preventDefault();
+        var formData = new FormData(this); // Pass 'this' instead of $(this)[0]
+        $.ajax({
+            type: 'POST',
+            url: '/',
+            data: formData,
+            processData: false, // Ensure data is not processed for FormData
+            contentType: false, // Ensure proper content type for FormData
+            success: function(response) {
+                var success = response['success'];
+                const textContainer = document.getElementById('text-container');
+                var animatedText = document.getElementById('animated-text');
+
+                if (success) {
+                    // Add success class and remove failed class
+                    textContainer.classList.remove("failed");
+                    textContainer.classList.add("success");
+                    animatedText.innerHTML = response['message'];
+                } else {
+                    // Add failed class and remove success class
+                    textContainer.classList.remove("success");
+                    textContainer.classList.add("failed");
+                    animatedText.innerHTML = response['message'];
+                }
+
+                // Scroll to the top of the container with class "con"
+                const con = document.querySelector('.conn');
+                if (con) {
+                    con.scrollTo({ top: 0, behavior: 'smooth' });
+                }
+
+                // Start the text animation
+                animateText();
+            }
+        });
+    });
+</script>
+
+
+<script>
+    $(document).on('submit', '#message', function (e){
+        e.preventDefault();
+        var formData = new FormData(this); // Pass 'this' instead of $(this)[0]
+        $.ajax({
+            type: 'POST',
+            url: '/message/',
+            data: formData,
+            processData: false, // Ensure data is not processed for FormData
+            contentType: false, // Ensure proper content type for FormData
+            success: function(response) {
+                var success = response['success'];
+                const textContainer = document.getElementById('text-con');
+                var animatedText = document.getElementById('anime-text');
+
+                if (success) {
+                    // Add success class and remove failed class
+                    textContainer.classList.remove("failed");
+                    textContainer.classList.add("success");
+                    animatedText.innerHTML = response['message'];
+                } else {
+                    // Add failed class and remove success class
+                    textContainer.classList.remove("success");
+                    textContainer.classList.add("failed");
+                    animatedText.innerHTML = response['message'];
+                }
+
+                // Scroll to the top of the container with class "con"
+                const con = document.querySelector('.conn');
+                if (con) {
+                    con.scrollTo({ top: 0, behavior: 'smooth' });
+                }
+
+                // Start the text animation
+                animateText();
+            }
+        });
+    });
+</script>
+</body>
+</html>
